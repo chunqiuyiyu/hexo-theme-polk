@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+}
+
+html, body, .container {
+  height: 100%;
+  font-family: TIBch,Classic Grotesque W01,Helvetica Neue,Arial,Hiragino Sans GB,STHeiti,Microsoft YaHei,WenQuanYi Micro Hei,SimSun,sans-serif;
+}
+
+.container {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.home {
+  display: table;
+  width: 100%;
+  height: 100%;
+
+  .info {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    .logo {
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: gray;
+    }
+
+    .sns {
+      margin: 1em auto;
+
+      a {
+        margin: 0.5em;
+        color: #999;
+
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+
+    footer {
+      border: 0;
+      color: #000;
+    }
+  }
+}
+
+.page {
+  margin: 0 20px;
+  margin-bottom: 2em;
+}
+
+@import "_partial/header";
+@import "_partial/post";
+@import "_partial/archive";
+@import "_partial/paginator";
+@import "_partial/footer";

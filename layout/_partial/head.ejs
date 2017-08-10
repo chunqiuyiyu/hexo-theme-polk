@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="<%= config.language || 'en' %>">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <%
+    var title = config.title;
+    var separator = theme.separator;
+    separator = ` ${separator} `;
+
+    if (is_home()){
+      if (config.subtitle) {
+        title += separator + config.subtitle;
+      }
+    }
+
+    if (is_archive()) {
+      title = __('Archives') + separator + title;
+    }
+
+    if (is_tag()) {
+      title = __('Post.Tags') + ' : ' + page.tag + separator + title;
+    }
+
+    if (page.title) {
+      title = page.title + separator + title;
+    }
+  %>
+  <title><%= title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <%
+    let keywords = theme.keywords, tmp = [];
+
+    if (page.tags && page.tags.length) {
+      page.tags.forEach(function(tag) {
+        tmp.push(tag.name);
+      });
+
+      keywords = tmp.join(',');
+    }
+  %>
+  <meta name="keywords" content=<%= keywords %>>
+  <% if (config.description){ %>
+    <meta name="description" content="<%= config.description %>">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="shortcut icon" type="image/x-icon" href="<%= url_for(theme.favicon) %>?v=1.02">
+  <% } %>
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%= url_for(theme.rss) %> " title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+
+  <%- css('/css/style.css?v=1.01') %>
+</head>
