@@ -17,7 +17,7 @@ git clone https://github.com/chunqiuyiyu/hexo-theme-polk themes/polk
 
 ## 更新
 ```shell
-cd themes/typing
+cd themes/polk
 git pull
 ```
 
