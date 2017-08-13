@@ -17,6 +17,13 @@
 
       .post-date {
         float: right;
+      
+        @media screen and (max-width: 425px) {
+          float: none;
+          margin-left: 0.5em;
+          font-size: 90%;
+          color: #999;
+        }
       }
 
       .post-title {
