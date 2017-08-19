@@ -4,7 +4,7 @@
 
 ## 预览
 
-[Demo](https://chunqiuyiyu.github.io/)
+[Demo](https://www.chunqiuyiyu.com/)
 
 ## 安装
 
