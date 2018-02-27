@@ -1,7 +1,8 @@
 # Polk
 
 Simple blog theme for Hexo, focusing on articles.
-[Chinese document](README.cn.md)
+
+[Chinese Document](README.cn.md)
 
 ## Preview
 
