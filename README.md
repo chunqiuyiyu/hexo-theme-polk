@@ -1,27 +1,30 @@
 # Polk
 
-极简的 Hexo 博客主题，专注于内容展现。
+Simple blog theme for Hexo, focusing on articles.
+[Chinese document](README.cn.md)
 
-## 预览
+## Preview
 
 [Demo](http://www.chunqiuyiyu.com/)
 
-## 安装
+## installation
 
 ```shell
 cd your-blog
 git clone https://github.com/chunqiuyiyu/hexo-theme-polk themes/polk
 ```
 
-修改博客目录下的 `_config.yml` ，将 `theme` 配置项的值改为 `polk`（默认值为 `landscape`）。同时，为了更好的显示效果，请将页面渲染文章数量 `per_page` 改为 20（默认为 10）。
+Modify `_config.yml` in your blog directory and change the value of` theme` to `polk` (the default is` landscape`). At the same time, in order to better display the effect, please change the number of page rendering articles `per_page` to 20 (default is 10).
 
-## 更新
+## Update
+
 ```shell
 cd themes/polk
 git pull
 ```
 
-## 浏览器支持
+## Browser support
+
 - Internet Explorer 9+
 - Firefox
 - Opera
@@ -29,5 +32,5 @@ git pull
 - Safari
 - Edge
 
-## 开源协议
+## License
 [MIT](LICENSE)
