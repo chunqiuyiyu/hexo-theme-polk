@@ -8,7 +8,7 @@ Simple blog theme for Hexo, focusing on articles.
 
 [Demo](http://www.chunqiuyiyu.com/)
 
-## installation
+## Installation
 
 ```shell
 cd your-blog
