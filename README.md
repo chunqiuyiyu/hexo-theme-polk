@@ -2,7 +2,7 @@
 
 Simple blog theme for Hexo, focusing on articles.
 
-[Chinese Document](README.cn.md)
+[中文文档](README.cn.md)
 
 ## Preview
 
