@@ -2,7 +2,7 @@
 
 极简的 Hexo 博客主题，专注于内容展现。
 
-[英文文档](README.md)
+[English Document](README.md)
 
 ## 预览
 
