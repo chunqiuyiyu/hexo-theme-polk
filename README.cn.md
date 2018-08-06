@@ -6,8 +6,6 @@
 
 ## 预览
 
-[Demo](http://www.chunqiuyiyu.com/)
-
 ## 安装
 
 ```shell
