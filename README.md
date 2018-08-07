@@ -2,8 +2,6 @@
 
 Simple blog theme for Hexo, focusing on articles.
 
-[中文文档](README.cn.md)
-
 ## Preview
 
 [Demo](http://www.chunqiuyiyu.com/)
