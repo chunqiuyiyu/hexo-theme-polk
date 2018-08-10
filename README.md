@@ -4,7 +4,7 @@ Simple blog theme for Hexo, focusing on articles.
 
 ## Preview
 
-[Demo](http://www.chunqiuyiyu.com/)
+![Pollk](./polk.png)
 
 ## Installation
 
