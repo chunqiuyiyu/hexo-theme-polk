@@ -1,21 +1,45 @@
 body {
   margin: 0;
+  font-size: 15px;
 }
 
-html, body, .container {
+html, body {
   height: 100%;
-  font-family: Hiragino Sans GB, Microsoft YaHei, WenQuanYi, Airal, sans-serif;
-  color: #444;
+  font-family: 'Noto Serif', serif;
+  color: #000;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .container {
   max-width: 840px;
   margin: 0 auto;
+  font-family: 'Noto Serif', serif;
+  color: #000;
+  height: 100%;
 }
 
 a {
-  color: #000;
+  color: #0000FF;
   text-decoration: none;
+}
+
+h1 {
+  font-family: 'Noto Serif', serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 18px;
+}
+h3 {
+  font-size: 16px;
+  font-style: italic;
 }
 
 .home {
@@ -29,25 +53,32 @@ a {
     text-align: center;
 
     .logo {
+      font-family: 'Noto Serif', serif;
       font-size: 2.5em;
       font-weight: bold;
+      background-color: black;
+      padding-left: 0.25em;
+      padding-right: 0.25em;
+      color: white;
     }
 
     .subtitle {
-      font-size: 14px;
-      color: gray;
+      padding: 0.25em;
+      font-size: 20px;
+      color: #5e5e5e;
     }
 
     .sns {
-      margin: 1em auto;
+      margin: 1.5em auto;
 
       a {
         width: 55px;
         color: #999;
         display: inline-block;
+        font-weight: 700;
 
         &:hover {
-          color: #000;
+          color: #0000FF;
         }
       }
     }
@@ -65,7 +96,7 @@ a {
   margin-bottom: 2em;
   
   p {
-    line-height: 1.5em;
+    line-height: 24px;
   }
 }
 
@@ -101,29 +132,13 @@ a {
   color: #f5871f;
 }
 
-/* Tomorrow Yellow */
-.highlight .attribute {
-  color: #eab700;
+.hide {
+  display: none;
 }
 
-/* Tomorrow Green */
-.highlight .string,
-.highlight .symbol,
-.highlight .bullet,
-.highlight .addition {
-  color: #718c00;
-}
-
-/* Tomorrow Blue */
-.highlight .title,
-.highlight .section {
-  color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.highlight .keyword,
-.highlight .selector-tag {
-  color: #8959a8;
+.myDIV:hover + .hide {
+  display: block;
+  color: #800;
 }
 
 .highlight {
