@@ -1,5 +1,6 @@
 <div class="home">
   <div class="info">
+    <div class="image"><img src="/images/logo.png" style="width:256px;height:256px;" class="center" /></div>
     <a href="/" class="logo"><%= config.title %></a>
     <div class="subtitle"><%= config.subtitle || '' %></div>
     <div class="sns">
@@ -7,6 +8,7 @@
           <a href="<%- url_for(theme.sns[item]) %>"><%= item %></a>
       <% } %>
     </div>
+    
     <%- partial('_partial/footer') %>
   </div>
 </div>
