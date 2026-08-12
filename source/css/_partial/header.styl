@@ -1,40 +1,75 @@
 .header {
-  margin-bottom: 2em;
-  padding: 0 20px;
+  margin: 0 1.5rem 2rem;
+  padding-top: 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fffdf9;
 
   .blog-title {
-    font-size: 2.5em;
-    text-align: center;
-    padding-top: 0.5em;
-    color: #000000;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #1e1d1b;
+
+    .logo {
+      color: inherit;
+      text-decoration: none;
+    }
   }
 
   .subtitle {
-    font-size: 15px;
-    font-style: italic;
-    color: #000000;
+    margin-top: 0.1rem;
+    font-size: 0.85rem;
+    color: #77726a;
+  }
+
+  .description {
+    margin-top: 0.7rem;
+    color: #514c45;
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
   .menu {
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid #ccc;
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.15rem;
+    margin: 1.2rem 0 0;
+    padding: 0.8rem 0 0;
+    border-top: 1px solid #dedad2;
 
     .menu-item {
-      margin: 0 15px 0 0;
-      padding: 3px 0 3px 0;
-      float: left;
-      display: inline-block;
-      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 500;
     }
 
     .menu-item-link {
-      color: #888;
+      color: #68635c;
+      text-decoration: none;
+    }
+  }
 
-      &:hover {
-        color: #000;
-      }
+  &.header-post {
+    padding-top: 0.75rem;
+
+    .menu {
+      margin-top: 0;
+      border-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .header {
+    margin: 0 1.25rem 1.75rem;
+    padding-top: 1.75rem;
+
+    &.header-post {
+      padding-top: 0.5rem;
     }
   }
 }

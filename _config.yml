@@ -13,12 +13,10 @@ sns:
 
 # Nav menu
 menu:
-  離去: /
-  索引: /landing
-  角色: /characters
-  世界: /world
-  故事: /story
-  關於: /about
+  Home: /
+  Code: https://github.com/chunqiuyiyu
+  Email: mailto:chunqiuyiyu@outlook.com
+  RSS: /atom.xml
 
 # Security
 encrypt: # hexo-blog-encrypt
@@ -26,14 +24,14 @@ encrypt: # hexo-blog-encrypt
   abstract: [redacted]
   message: 請輸入密碼.
   tags:
-  - {name: Avian, password: 12BD761}
+  - {name: Avian, password: xxxxxx}
   wrong_pass_message: 抱歉, 密碼錯誤.
   wrong_hash_message: 抱歉, 此文章不能被校驗.
   theme: default
 
 # advanced markdown
 markdown_it_plus:
-    highlight: true
+    highlight: false
     html: true
     xhtmlOut: true
     breaks: true
@@ -52,4 +50,3 @@ toc:
     position: after
     symbol: '#'
     style: header-anchor
-

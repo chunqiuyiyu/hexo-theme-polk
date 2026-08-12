@@ -1,21 +1,30 @@
 .page-nav {
-  padding: 0 20px;
+  margin: 0 1.5rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.8rem;
+  padding-top: 1rem;
 
   .prev,
-
-  .page-number {
-    padding: 10px 20px 10px 0;
+  .page-number,
+  .next {
+    padding: 0.5rem 0;
   }
 
   .next {
-    float: right;
+    margin-left: auto;
   }
 
   a {
-    color: #777;
+    color: #68635c;
+    text-decoration: none;
+  }
+}
 
-    &:hover {
-      color: #000;
-    }
+@media screen and (max-width: 720px) {
+  .page-nav {
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
   }
 }

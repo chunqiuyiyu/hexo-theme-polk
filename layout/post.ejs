@@ -1,24 +1,24 @@
 <%- partial('_partial/header') %>
-<article class="post">
+<main id="main-content">
+  <article class="post">
   <div class="post-title">
     <h1 class="article-title"><%= page.title %></h1>
   </div>
-   <div class="post-meta" style="color:#0000ff;font-size:16px;">
+   <div class="post-meta">
     <span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span> <br>
   </div>
   <div class="post-content">
     <%- page.content %>
   </div>
-  <div class="post-footer">
-    <% if (page.tags && page.tags.length){ %>
+  <% if (page.tags && page.tags.length){ %>
+    <div class="post-footer">
       <%- list_tags(page.tags, {
         show_count: false,
         class: 'post-tag'
       }) %>
-    <% } %>
-
-    <a href="#top" class="top"><%= __('Post.Top') %></a>
-  </div>
+    </div>
+  <% } %>
   
-</article>
+  </article>
+</main>
 <%- partial('_partial/footer') %>

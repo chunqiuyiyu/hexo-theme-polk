@@ -3,7 +3,6 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="robots" content="noindex">
   <%
     var title = config.title;
     var separator = theme.separator;
@@ -24,9 +23,15 @@
     }
   %>
   <title><%= title %></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fffdf9">
   <%
     let keywords = theme.keywords, tmp = [];
+    let description = page.description || page.excerpt || page.content || config.description || '';
+    description = strip_html(description).replace(/\s+/g, ' ').trim().slice(0, 160);
+    let pageUrl = full_url_for(page.path || '');
+    let image = page.og_image || page.image || theme.og_image;
+    let imageUrl = image ? full_url_for(image) : '';
     if (page.tags && page.tags.length) {
       page.tags.forEach(function(tag) {
         tmp.push(tag.name);
@@ -34,9 +39,23 @@
       keywords = tmp.join(',');
     }
   %>
-  <meta name="keywords" content=<%= keywords %>>
-  <% if (config.description){ %>
-    <meta name="description" content="<%= config.description %>">
+  <meta name="keywords" content="<%= keywords || '' %>">
+  <meta name="description" content="<%= description %>">
+  <link rel="canonical" href="<%= pageUrl %>">
+  <meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>">
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:description" content="<%= description %>">
+  <meta property="og:url" content="<%= pageUrl %>">
+  <meta property="og:site_name" content="<%= config.title %>">
+  <meta property="og:locale" content="<%= (config.language || 'en').replace('-', '_') %>">
+  <% if (imageUrl) { %>
+    <meta property="og:image" content="<%= imageUrl %>">
+  <% } %>
+  <meta name="twitter:card" content="<%= imageUrl ? 'summary_large_image' : 'summary' %>">
+  <meta name="twitter:title" content="<%= title %>">
+  <meta name="twitter:description" content="<%= description %>">
+  <% if (imageUrl) { %>
+    <meta name="twitter:image" content="<%= imageUrl %>">
   <% } %>
   <% if (theme.favicon){ %>
     <link rel="shortcut icon" type="image/x-icon" href="<%= url_for(theme.favicon) %>?v=1.02">

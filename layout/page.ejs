@@ -1,10 +1,12 @@
 <%- partial('_partial/header') %>
-<div class="page">
-  <div class="page-title">
-    <h1 class="article-title"><%= page.slug %></h1>
+<main id="main-content">
+  <div class="page">
+    <div class="page-title">
+      <h1 class="article-title"><%= page.slug %></h1>
+    </div>
+    <div class="page-content">
+      <%- page.content %>
+    </div>
   </div>
-  <div class="page-content">
-    <%- page.content %>
-  </div>
-</div>
+</main>
 <%- partial('_partial/footer') %>

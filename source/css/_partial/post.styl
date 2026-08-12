@@ -1,9 +1,9 @@
 .post {
-  padding: 0 20px;
-  margin-bottom: 1.5em;
+  margin: 0 1.5rem 2rem;
 
   img {
     max-width: 100%;
+    height: auto;
   }
   
   table {
@@ -21,85 +21,81 @@
   }
 
   .post-content {
-    text-align: justify;
-    
-    a {
-      border-bottom: 1px dotted;
+    margin-top: 2rem;
+    text-align: left;
 
-      &:hover {
-        border-bottom: 1px solid;
-      }
+    a {
+      overflow-wrap: break-word;
     }
 
     ul, ol {
       text-align: left;
+      padding-left: 1.4rem;
 
       li {
-        padding: 5px;
-        line-height: 1.5em;
+        padding: 0.15rem 0;
+        line-height: 1.75;
       }
-    }
-  }
-
-  figure {
-    margin: 0;
-    table {
-      width: 100%;
-      
-      .code {
-        border: 0;
-        padding: 0;
-      }
-    }
-
-    .gutter {
-      display: none;
     }
   }
 
   blockquote {
-    margin: 0;
-    padding: 0 15px;
-    color: #777;
-    border-left: 4px solid #ddd;
+    margin: 1.8rem 0;
+    padding: 0.15rem 1.25rem;
+    color: #66615a;
+    border-left: 3px solid #c9c1b6;
   }
 
   pre {
-    font-family: initial;
-    margin: 0;
-    padding: 0.5em 1.5em;
+    margin: 1.5rem 0;
+    padding: 1.1em 1.25em;
     overflow: auto;
-    font-size: 85%;
-    line-height: 1.8;
-    background-color: #f7f7f7;
-    border: 1px solid #ccc;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: #3f3a34;
+    background-color: #f8f7f4;
+    border: 0;
+    border-left: 3px solid #c9c1b6;
+    border-radius: 0 4px 4px 0;
+    box-shadow: inset 0 0 0 1px #ebe7e0;
+
+    code {
+      margin: 0;
+      padding: 0;
+      font-size: inherit;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+    }
   }
 
   code {
-    background: #f7f7f7;
-    border: 1px solid #d6d6d6;
-    font-family: inherit;
-    font-size: 90%;
-    margin: 5px;
-    padding: 0 5px;
+    background: #f1eee8;
+    border: 1px solid #e4dfd7;
+    border-radius: 3px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.82em;
+    margin: 0 0.12em;
+    padding: 0.08em 0.3em;
   }
 
   p {
-    line-height: 1.5em;
+    margin: 1.2rem 0;
+    line-height: 1.85;
+  }
+
+  .post-meta {
+    margin-top: 0.75rem;
+    color: #746e65;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.01em;
   }
 
   .post-footer {
     line-height: 1;
     min-height: 1em;
-
-    .top {
-      float: right;
-      color: #666;
-
-      &:hover {
-        color: #000;
-      }
-    }
 
     .post-tag-list {
       display: inline-block;
@@ -120,6 +116,19 @@
         }
 
       }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .post {
+    margin: 0 1.25rem 1.75rem;
+
+    table {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
     }
   }
 }
